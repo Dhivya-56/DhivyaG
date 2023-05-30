@@ -1,0 +1,39 @@
+<html>
+<head>
+    
+        <style>
+#divi {
+  width: 350px;
+  height: 150px;
+  padding: 10px;
+  border: 5px solid;
+}
+</style>
+    
+    <title>sample work</title>
+</head>
+<body bgcolor="blue">
+    <script>
+        function AllowDrop(ev)
+        {
+            ev.preventDefault();
+        }
+        
+        function dragging(ev)
+        {
+            ev.dataTransfer.setData("text",ev.target.id);
+        }
+        function dropping(ev)
+        {
+            ev.preventDefault();
+            var data=ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        
+        }
+    </script>
+    <p>The image given below is draged to that box</p>
+    <div id="divi" ondrop="dropping(event)" ondragover="AllowDrop(event)"></div>
+    <img id="drag" src="J0145168.jpg" draggable="true" ondragstart="dragging(event)" width="350" height="90">
+
+</body>
+</html>
