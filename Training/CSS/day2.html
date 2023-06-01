@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>Sample</title>
+    <style>
+      body {
+        background-color: #d4fbf3;
+      }
+      header {
+        background-color: #fbd6d4;
+      }
+      ul{
+        display: flex;
+        justify-content: space-evenly;
+      }
+      ul > li {
+        ul
+        list-style: none;
+      }
+      #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        font-size: 24px;
+        margin-bottom: 20px;
+        width:10px;
+        height:20px;
+      }
+      .tit1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        padding: 20px;
+        border: 1px solid blue;
+        margin: 5px;
+      }
+      #foot {
+        text-align: center;
+        background-color: #fbedd4;
+        font-size: 32;
+        font-style: italic;
+      }
+      input[type="button"] {
+        padding: 10px;
+        background-color: #d4fbd6;
+      }
+      input[type="button"]:hover {
+        background-color: #efd4fb;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sample form</h1>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About us</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="container">
+        <div class="tit1">
+          <h2>Title</h2>
+          <p id="para">
+            Technology is the application of scientific knowledge to the
+            practical aims of human life or, as it is sometimes phrased, to the
+            change and manipulation of the human environment.
+          </p>
+          <input type="button" value="ReadMore" />
+        </div>
+        <div class="tit1">
+          <h2>Title2</h2>
+          <p id="para1">
+            Summer is the hottest of the four temperate seasons, occurring after
+            spring and before autumn.
+          </p>
+          <input type="button" value="ReadMore" />
+        </div>
+        <div class="tit1">
+          <h2>Title3</h2>
+          <p id="para2">
+            summer, warmest season of the year, between spring and autumn
+          </p>
+          <input type="button" value="ReadMore" />
+        </div>
+      </div>
+    </main>
+    <footer id="foot">&copyCopyrights reserved</footer>
+  </body>
+</html>
