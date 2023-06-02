@@ -1,0 +1,44 @@
+.list {
+  background-color: gray;
+  font-size: 20px;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+ul > li {
+  list-style: none;
+}
+.apple {
+  text-align: center;
+}
+.apple_abtapple,
+.apple_iphone,
+.apple_watch,
+.apple_mac {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.apple_hiphone,
+.apple_tab {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.apple_tab {
+  margin-left: 30px;
+}
+.tab_watch {
+  display: flex;
+}
+.apple_watch {
+  width: 50%;
+  height: 30%;
+}
+.mac_watch {
+  display: flex;
+}
