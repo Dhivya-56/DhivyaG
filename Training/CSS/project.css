@@ -16,7 +16,9 @@ ul > li {
 .apple_abtapple,
 .apple_iphone,
 .apple_watch,
-.apple_mac {
+.apple_mac,
+.apple_ipad,
+.apple_pod {
   background-color: black;
   color: white;
   font-size: 20px;
@@ -24,7 +26,7 @@ ul > li {
 }
 .apple_hiphone,
 .apple_tab {
-  background-color: white;
+  background-color: rgb(244, 233, 233);
   color: black;
   font-size: 20px;
   margin-bottom: 20px;
@@ -41,4 +43,64 @@ ul > li {
 }
 .mac_watch {
   display: flex;
+}
+.ipad_pod {
+  display: flex;
+  justify-content: space-between;
+}
+.apple_ipad {
+  width: 660px;
+}
+.apple_pod {
+  width: 650px;
+}
+.apple_abtapple h3 {
+  font-size: 50px;
+}
+.apple_iphone {
+  font-size: 30px;
+}
+.apple_mac {
+  width: 670px;
+}
+.apple_hiphone h1,
+.apple_mac h1,
+.apple_ipad h1,
+.apple_pod h1 {
+  font-size: 40px;
+}
+#ilogo {
+  text-align: top;
+}
+.shop_learn,
+.account,
+.entertain,
+.apple_st,
+.business,
+.education,
+.health,
+.apple_values,
+.abt_apple {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.wallet {
+  display: flex;
+  flex-direction: column;
+}
+.apple_details {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid rgb(218, 205, 205);
+  gap: 5px;
+}
+.ways {
+  border-bottom: 1px solid rgb(218, 205, 205);
+}
+
+.foot {
+  display: flex;
+  /*justify-content: space-between;*/
 }
