@@ -1,0 +1,53 @@
+1. Two Sum
+
+var twoSum = function(nums, target) {
+var obj={};
+   var find=target-nums[i];
+    for( var i=0;i<nums.length;i++){
+         
+        for(j=i+1;j<nums.length;j++){
+           
+ 
+
+ if(target-nums[i]==nums[0])
+ {
+    
+     return[i,j];
+ }else{
+ find[i+j];
+ }
+ }
+    }
+   
+};
+
+--------------------------------------------------------------------------------------------------------------------------
+34. Find First and Last Position of Element in Sorted Array
+
+var searchRange = function(nums, target) {
+   for(i=0;i<nums.length;i++){
+       for(j=i+1;j<nums.length-2;j++){}
+   
+   if(target-nums[i]==0){
+       return[i,j];
+   }
+   }
+
+};
+
+--------------------------------------------------------------------------------------------------------------------------
+41. First Missing Positive
+
+var firstMissingPositive = function(nums) {
+    
+    var num=nums[i]+1;
+    for( var i=0;i<nums.length;i++){
+        for(j=i+1;j<nums.length;j++){
+
+       
+        if(num[i]>1){
+            return(nums[i]+1);
+        }
+         }
+    }
+};
