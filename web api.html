@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+  </head>
+
+  <body>
+    <main>
+      <section class="input">
+        <h2>Task Manager</h2>
+        <input type="text" id="task" />
+        <input
+          type="button"
+          value="Add Task"
+          id="button"
+          onclick="addingTask()"
+        />
+      </section>
+      <section class="list">
+        <ul id="mylist"></ul>
+      </section>
+    </main>
+
+    <script>
+      let taskInput = document.getElementById("task");
+      let addTaskBtn = document.getElementById("button");
+
+      function addTaskResponse(task) {
+        let ul = document.getElementById("mylist");
+        let li = document.createElement("li");
+        li.textContent = task;
+        ul.appendChild(li);
+      }
+
+      function loader(isLoading) {
+        if (isLoading) {
+          addTaskBtn.value = "Loading...";
+          addTaskBtn.disabled = true;
+        } else {
+          addTaskBtn.value = "Add Task";
+          addTaskBtn.disabled = false;
+        }
+      }
+
+      function stimulateWebApi(task) {
+        return new Promise(function (resolve, reject) {
+          loader(true);
+          setTimeout(function () {
+            if (task.length <= 10) {
+              resolve(task);
+            } else {
+              reject("Task Length should be less than 10");
+            }
+            loader(false);
+          }, 2000);
+        });
+      }
+
+      function clearInput() {
+        taskInput.value = "";
+      }
+
+      function addingTask() {
+        let task = taskInput.value;
+
+        stimulateWebApi(task)
+          .then(function (response) {
+            addingTaskResponse(response);
+            clearInput();
+          })
+          .catch(function (err) {
+            alert(err);
+          });
+      }
+    </script>
+  </body>
+</html>
