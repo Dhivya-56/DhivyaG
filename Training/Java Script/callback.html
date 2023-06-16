@@ -1,0 +1,18 @@
+<html>
+  <head> </head>
+  <body>
+    <script>
+      function showData(name, amt) {
+        alert(name);
+      }
+
+      function getData(callback) {
+        var name = "Dhivya";
+
+        callback(name);
+      }
+
+      getData(showData);
+    </script>
+  </body>
+</html>

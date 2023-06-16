@@ -1,0 +1,62 @@
+n<html>
+  <head>
+    <title>stop watch</title>
+  </head>
+  <style>
+    body {
+      background-color: antiquewhite;
+    
+    #html_js {
+      font-size: 70px;
+      background-color: rgb(250, 250, 71);
+      height: 200px;
+      width: 700px;
+      text-align: center;
+      margin-left: 280px;
+    }
+    h1 {
+      text-align: center;
+    }
+    button {
+      font-size: 70px;
+    }
+  </style>
+  <body>
+    <h1>Stop Watch using setInterval</h1>
+    <main>
+      <div id="html_js">
+        <div id="stopwatch">00:00</div>
+        <button onClick="stop()">Pause</button>
+        <button onClick="reset()">Reset</button>
+        <button onClick="lap()">Lap</button>
+      </div>
+      <div>
+        <p id="lapsrec">Laps</p>
+      </div>
+    </main>
+    <script>
+      var timer;
+
+      var element = document.getElementById("stopwatch");
+      var sec = 0;
+      (function () {
+        timer = setInterval(() => {
+          element.innerHTML = "00:" + sec;
+          sec++;
+        }, 1000);
+      })();
+      function stop() {
+        clearInterval(timer);
+      }
+      function reset() {
+        var sec = 0;
+        timer = setTimeout(() => {
+          element.innerHTML = "00:" + sec;
+        });
+      }
+      function lap() {
+        console.log("00:23");
+      }
+    </script>
+  </body>
+</html>

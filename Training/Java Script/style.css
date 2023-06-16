@@ -1,0 +1,29 @@
+body{
+    background-color:paleturquoise;
+    text-align: center;
+}
+#product_details{
+    text-align: center;
+}
+#list{
+    text-align: center;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+}
+main{
+    text-align:center ;
+}
+#container{
+    
+    background-color: azure;
+    width: 700px;
+    margin-left: 250px;
+    text-align: left;
+    padding: 30px;
+}
+#form input{
+     padding: 10px;
+}
